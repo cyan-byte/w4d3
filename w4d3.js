@@ -85,6 +85,7 @@ plantee.splice(2, 1, 5001)
 console.log(plantee)
 // Change Wolfy's hometown from "Yukon Territory" to "Gotham City".
 wolfy.splice(3, 1, 'Gotham City')
+// or use wolfy[3] = 'Gotham City'
 console.log(wolfy)
 // Give D'Art a second hometown by adding "Hawkins"
 dart.push('Hawkins')
@@ -98,43 +99,73 @@ console.log(wolfy)
 // Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
 // Use a for of loop(not a typo - try it out! Try a for ofloop) to call toUpperCase()on each of them and print out the result.
 const ninjaTurtles = ['Donatello', 'Leonardo', 'Raphael', 'Michaelangelo']
-for(ninjaTurtle of ninjaTurtles){
-    ninjaTurtles[ninjaTurtles.indexOf(ninjaTurtle)] = ninjaTurtle.toUpperCase();
+for(let ninjaTurtle of ninjaTurtles){
+    console.log(ninjaTurtle.toUpperCase())
+
 }
-console.log(ninjaTurtles)
 // As a developer, you'll be a lifelong learner and constantly encountering new things. We'll give you little stretches like this to get you used to looking at documentation and figuring some things out on your own. You've got this!
 
 // 🔴 The commit message should read:
 // "Yell at the Ninja Turtles answered"
+
 // Methods, Revisited
 // Here is a list of favMovies:
-
-// const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 // Console log: the index of Titanic
+console.log(favMovies.indexOf('Titanic'))
+
 // Do the following and console.log the final results (I have included some thought questions, you don't have to write out an answer for those marked as such):
 // Note: if you have to add to the array, feel free to add any movie you'd like
 
-// use the .sortmethod Thought question: what did this do to the array? Did it permanently alter it?
+// use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
+favMovies.sort() // yes
+console.log(favMovies)
+// YES
+
 // Use the method pop
+favMovies.pop()
 // push"Guardians of the Galaxy"
+favMovies.push('Guardians of the Galaxy')
 // Reverse the array
+favMovies.reverse()
 // Use the shiftmethod
+favMovies.shift()
+console.log(favMovies) //removed the first movie
+
 // unshift- what does it return?
+favMovies.unshift('New String') //with an empty argument, it returns the length of the array, if you add a string for ex, it adds the string to the beginning
+console.log(favMovies)
 // splice"Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself) Thought question: did this permanently alter our array?
-// slicethe last half of the array (challenge yourself and try to programatically determine the middle of the array rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
-// store the value of your slicein a variable, console.log it - Thought question: what is going on here?
+console.log(favMovies.indexOf('Django Unchained'))
+favMovies.splice(favMovies.indexOf('Django Unchained'), 1, 'Avatar')
+// slice the last half of the array (challenge yourself and try to programatically determine the middle of the array rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
+
+// store the value of your slice in a variable, console.log it - Thought question: what is going on here?
 // console.log your final results
+console.log(favMovies.length / 2)
+favMovies.slice(favMovies.length / 2)
+const favHalf = favMovies.slice(favMovies.length / 2)
+console.log(favHalf)
+console.log(favMovies.indexOf('Fast and Furious'))
+
+
+
 // After running the above tasks, console.log the index of "Fast and Furious" -We removed it from the array, what value do we get when we look for the index of something that is not in the array?
+// -1 but I have to fix it
 // Thought question: that we declared the variable favMovieswith const, and yet, we were allowed to change the array. Weird? Should we have used let?
+// arrays are mutable
 
 // 🔴 The commit message should read:
 // "Methods Revisited answered"
+
+
 // Where is Waldo
 // With the following multi-dimensional array
 // const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
 //                     ["Lucinda", "Jacc", "Neff", "Snoop"],
 //                     ["Petunia", ["Baked Goods", "Waldo"]]];
-// Remove Eggbert (hint look at the slice/splice method(s))
+// // Remove Eggbert (hint look at the slice/splice method(s))
+// whereIsWaldo.splice()
 // Change "Neff" to "No One"
 // Access and console.log "Waldo"
 // 🔴 The commit message should read:
