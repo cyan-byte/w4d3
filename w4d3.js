@@ -37,10 +37,14 @@ for(let i = 1; i <= 20; i++){
 // "Easy Going answered"
 // Get Even
 // Write a for loop that will log only the even numbers in 0 through 200.
-// for (let i = 1; i<=200; i++){
-    // if(i % 2 == 0){
-    //     console.log(i + ' is even')
-    // }
+for (let i = 1; i<=200; i++){
+    if(i % 2 == 0){
+        console.log(i + ' is even')
+    }
+    else{
+        console.log(i)
+    }
+}
 
 // Hint: Think about the increment expression.
 
@@ -55,7 +59,17 @@ for(let i = 1; i <= 20; i++){
 // If a number is divisible by 3 and 5 log "FizzBuzz" instead of the number.
 // 🔴 The commit message should read:
 // "Fizz Buzz answered"
-// for()
+for(let i = 1; i <= 100; i++){
+    if(i % 3 == 0 && i % 5 == 0){
+        console.log('FizzBuzz')
+    }
+    else if(i % 3 == 0){
+        console.log('Fizz')
+    }
+    else if(i % 5 == 0){
+        console.log('Buzz')
+    }
+}
 
 // Wild Wild Life
 // Use the following arrays to answer the questions below (name,species ,age, hometown): You should be modifying the elements by accessing them. It is up to you which methods to use.
