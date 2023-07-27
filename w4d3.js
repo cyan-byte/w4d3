@@ -171,10 +171,17 @@ whereIsWaldo.splice([1][0], 1)
 whereIsWaldo[1][2] = 'No One'
 console.log(whereIsWaldo)
 // Access and console.log "Waldo"
+console.log(whereIsWaldo[2][1][1])
 // 🔴 The commit message should read:
 // "Where is Waldo answered"
 // Excited Kitten
 // Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
+// for(let i = 1; i <= 20; i++){
+//     if(i % 2 == 0){
+//         console.log
+//     }
+//     console.log('Love me, pet me! HSSSSSS! ' + i)
+// }
 // For every even number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.
 // Hint 1
 // Hint 2
